@@ -1,5 +1,5 @@
 # NEXUSLFG
 Contributors:
-  Nicholas Law
+  Nicholas Law/
   Colin Rampton
   
