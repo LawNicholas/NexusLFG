@@ -1,5 +1,5 @@
 # NEXUSLFG
-Contributors:
+Contributors:  \
   Nicholas Law \
   Colin Rampton
   
