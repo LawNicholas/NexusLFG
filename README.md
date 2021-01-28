@@ -1,5 +1,6 @@
 # NEXUSLFG
 Contributors:  \
   Nicholas Law \
-  Colin Rampton
+  Colin Rampton \
+  Jordan Golden
   
