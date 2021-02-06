@@ -1,0 +1,41 @@
+TEAM SEARCH 1
+
+CREATE VIEW choose_your_game AS
+SELECT GameName
+FROM Game
+
+TEAM SEARCH 2
+CREATE VIEW choose_your_rank AS
+SELECT Rank.RankName
+FROM Rank
+JOIN Game ON Rank.GameID = Game.GameID
+
+CREATE VIEW choose_your_role AS
+SELECT Role.RoleName
+FROM Role
+JOIN Game ON Role.GameID = Game.GameID
+
+CREATE VIEW choose_your_region AS
+SELECT Region.RegionName
+FROM Region
+JOIN Game ON Region.GameID = Game.GameID
+
+CREATE VIEW choose_your_mode AS
+SELECT Mode.ModeName
+FROM Mode
+JOIN Game ON Mode.GameID = Game.GameID
+
+TEAM SEARCH 3
+CREATE VIEW choose_a_team AS
+SELECT Team.TeamName, Team.Icon
+FROM Team
+JOIN choose_your_rank ON Team.GameID = Game.GameID
+JOIN choose_your_role ON Team.GameID = Game.GameID
+JOIN choose_your_region ON Team.GameID = Game.GameID
+JOIN choose_your_mode ON Team.GameID = Game.GameID
+
+Or
+CREATE VIEW choose_a_team AS
+SELECT Team.TeamName, Team.Icon
+FROM Team
+JOIN Game ON Team.GameID = Game.GameID
