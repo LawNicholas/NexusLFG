@@ -5,6 +5,10 @@ Contributors:  \
   Jordan Golden
   
 ## Project Updates
+2021.2.6
+* Created a folder for View queries.
+* Built Views related to each of our prototype pages.
+
 2021.1.30
 * PostgreSQL installed on Ubuntu 18.04 server.
 * dbuser created as superuser for Postgres.
