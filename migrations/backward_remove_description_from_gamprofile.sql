@@ -1,4 +1,4 @@
 ALTER TABLE
-    Game_Profile
+    Mode
 DROP
-    COLUMN "Description";
+    COLUMN "teamsize";
