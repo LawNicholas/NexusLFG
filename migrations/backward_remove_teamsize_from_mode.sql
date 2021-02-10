@@ -1,4 +1,4 @@
 ALTER TABLE
     Mode
-ADD
+DROP
     COLUMN "teamsize" INT;
