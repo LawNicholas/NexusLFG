@@ -1,0 +1,4 @@
+CREATE TRIGGER set_ispublic
+BEFORE INSERT ON team
+FOR EACH ROW
+EXECUTE PROCEDURE trigger_set_ispublic();

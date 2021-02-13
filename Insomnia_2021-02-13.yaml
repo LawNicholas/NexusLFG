@@ -1,0 +1,427 @@
+_type: export
+__export_format: 4
+__export_date: 2021-02-13T21:13:55.412Z
+__export_source: insomnia.desktop.app:v2020.5.2
+resources:
+  - _id: req_c21017c7f58b4d4293422cdee6e4d152
+    parentId: fld_775907579de14affbd26ea6bdfd8bcb7
+    modified: 1613250689765
+    created: 1613250689765
+    url: http://192.168.50.61:8000/choose_a_team
+    name: Choose a Team
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613250045300
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_775907579de14affbd26ea6bdfd8bcb7
+    parentId: wrk_21877f9381b34fd8b33e3c65f7861ec4
+    modified: 1613250689757
+    created: 1613250689757
+    name: Views
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1000000000
+    _type: request_group
+  - _id: wrk_21877f9381b34fd8b33e3c65f7861ec4
+    parentId: null
+    modified: 1613250667046
+    created: 1613250667046
+    name: Esports
+    description: ""
+    scope: null
+    _type: workspace
+  - _id: req_631a428b8bb144a59c2060808c34b953
+    parentId: fld_775907579de14affbd26ea6bdfd8bcb7
+    modified: 1613250689779
+    created: 1613250689779
+    url: http://192.168.50.61:8000/choose_your_game
+    name: Choose Your Game
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613250045275
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_744a214765a34387a610b75a637c1315
+    parentId: fld_775907579de14affbd26ea6bdfd8bcb7
+    modified: 1613250689790
+    created: 1613250689790
+    url: http://192.168.50.61:8000/choose_your_mode
+    name: Choose Your Mode
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613250045250
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_833d53806e194a03aeb0b1e00b73307b
+    parentId: fld_775907579de14affbd26ea6bdfd8bcb7
+    modified: 1613250689799
+    created: 1613250689799
+    url: http://192.168.50.61:8000/choose_your_rank
+    name: Choose Your Rank
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613250045200
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b2b53d4a07564e7888cc73445aff1661
+    parentId: fld_775907579de14affbd26ea6bdfd8bcb7
+    modified: 1613250689809
+    created: 1613250689809
+    url: http://192.168.50.61:8000/choose_your_region
+    name: Choose Your Region
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613250045150
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4983cfd24e1e4147bc59e1f42c892c81
+    parentId: fld_775907579de14affbd26ea6bdfd8bcb7
+    modified: 1613250689820
+    created: 1613250689820
+    url: http://192.168.50.61:8000/choose_your_role
+    name: Choose Your Role
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613250045100
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_dec3c6ad8dda4726b69c94b71f66b872
+    parentId: fld_775907579de14affbd26ea6bdfd8bcb7
+    modified: 1613250689830
+    created: 1613250689830
+    url: http://192.168.50.61:8000/create_team
+    name: Create Team
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613250045050
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_dec75e2a399a43f4a75b5b5bd0a93e05
+    parentId: fld_775907579de14affbd26ea6bdfd8bcb7
+    modified: 1613250689840
+    created: 1613250689840
+    url: http://192.168.50.61:8000/create_team_mode
+    name: Create Team Mode
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613250045000
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_24225f283ed443be84a92cd76264dbec
+    parentId: fld_775907579de14affbd26ea6bdfd8bcb7
+    modified: 1613250689848
+    created: 1613250689848
+    url: http://192.168.50.61:8000/create_team_region
+    name: Create Team Region
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613250044975
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9279224a7fc247a696122042dca2e0a3
+    parentId: fld_775907579de14affbd26ea6bdfd8bcb7
+    modified: 1613250689866
+    created: 1613250689866
+    url: http://192.168.50.61:8000/find_teammate_results
+    name: Find Teammate Results
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613250044950
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4de6b0972fce430e8cd67b1d587ab39d
+    parentId: fld_775907579de14affbd26ea6bdfd8bcb7
+    modified: 1613250689880
+    created: 1613250689880
+    url: http://192.168.50.61:8000/find_teammate_search
+    name: Find Teammate Search
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613250044900
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_20349da31bb040459f7e2733461f6d86
+    parentId: fld_775907579de14affbd26ea6bdfd8bcb7
+    modified: 1613250689891
+    created: 1613250689891
+    url: http://192.168.50.61:8000/find_teammate_search_mode
+    name: Find Teammate Search Mode
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613250044850
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_cbdff7dc9fe64922947840be0f9f54e6
+    parentId: fld_775907579de14affbd26ea6bdfd8bcb7
+    modified: 1613250689900
+    created: 1613250689900
+    url: http://192.168.50.61:8000/find_teammate_search_rank
+    name: Find Teammate Search Rank
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613250044800
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0aa5bbb1db5e42b2a50887e7f4bf1590
+    parentId: fld_775907579de14affbd26ea6bdfd8bcb7
+    modified: 1613250689910
+    created: 1613250689910
+    url: http://192.168.50.61:8000/find_teammate_search_region
+    name: Find Teammate Search Region
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613250044750
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a202579307c0423381a2816568a84f9f
+    parentId: fld_775907579de14affbd26ea6bdfd8bcb7
+    modified: 1613250689920
+    created: 1613250689920
+    url: http://192.168.50.61:8000/find_teammate_search_role
+    name: Find Teammate Search Role
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613250044700
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_543a0d204c0843aa9b0b934aae7e7dd0
+    parentId: fld_775907579de14affbd26ea6bdfd8bcb7
+    modified: 1613250689928
+    created: 1613250689928
+    url: http://192.168.50.61:8000/profile
+    name: Profile
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613250044650
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_87058b99c955430fb3eee140924c0a38
+    parentId: fld_775907579de14affbd26ea6bdfd8bcb7
+    modified: 1613250689956
+    created: 1613250689956
+    url: http://192.168.50.61:8000/team_expanded
+    name: Team Expanded
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613250044600
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_cb2460353e8347bfad075135cfe3b74f
+    parentId: fld_775907579de14affbd26ea6bdfd8bcb7
+    modified: 1613250689977
+    created: 1613250689977
+    url: http://192.168.50.61:8000/team_overview
+    name: Team Overview
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613250044550
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_3dab586de0cdfaba01fc12f137eac713923cfef9
+    parentId: wrk_21877f9381b34fd8b33e3c65f7861ec4
+    modified: 1613250667329
+    created: 1613250667329
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1613250667329
+    _type: environment
+  - _id: jar_3dab586de0cdfaba01fc12f137eac713923cfef9
+    parentId: wrk_21877f9381b34fd8b33e3c65f7861ec4
+    modified: 1613250667339
+    created: 1613250667339
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_6b24f6589a544ba6bc2d0677bbf2863f
+    parentId: wrk_21877f9381b34fd8b33e3c65f7861ec4
+    modified: 1613250667061
+    created: 1613250667061
+    fileName: Esports
+    contents: ""
+    contentType: yaml
+    _type: api_spec

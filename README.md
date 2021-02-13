@@ -5,6 +5,11 @@ Contributors:  \
   Jordan Golden
   
 ## Project Updates
+2021.2.13
+* Updated faulty views.
+* Created GET requests for each View.
+* Created Stored Procedure and Trigger which auto-sets ispublic to 0 for a newly created team.
+
 2021.2.6
 * Created a folder for View queries.
 * Built Views related to each of our prototype pages.
