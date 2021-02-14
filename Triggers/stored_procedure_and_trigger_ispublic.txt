@@ -1,0 +1,12 @@
+CREATE OR REPLACE FUNCTION trigger_set_ispublic()
+RETURNS TRIGGER AS $$
+BEGIN
+  NEW.ispublic = 0;
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER set_ispublic
+BEFORE INSERT ON team
+FOR EACH ROW
+EXECUTE PROCEDURE trigger_set_ispublic();
