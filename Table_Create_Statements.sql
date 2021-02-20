@@ -1,4 +1,4 @@
-CREATE TABLE User
+CREATE TABLE user_profile
 (
   UserId SERIAL,
   UserName VARCHAR NOT NULL,
@@ -7,7 +7,7 @@ CREATE TABLE User
   PRIMARY KEY (UserId)
 );
 
-CREATE TABLE Game
+CREATE TABLE game
 (
   TeamSize INT NOT NULL,
   GameName VARCHAR NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE Game
   UNIQUE (GameName)
 );
 
-CREATE TABLE Role
+CREATE TABLE role
 (
   RoleName VARCHAR NOT NULL,
   RoleId SERIAL,
@@ -25,7 +25,7 @@ CREATE TABLE Role
   FOREIGN KEY (GameId) REFERENCES Game(GameId)
 );
 
-CREATE TABLE Region
+CREATE TABLE region
 (
   RegionId SERIAL,
   RegionName VARCHAR NOT NULL,
@@ -34,7 +34,7 @@ CREATE TABLE Region
   FOREIGN KEY (GameId) REFERENCES Game(GameId)
 );
 
-CREATE TABLE Rank
+CREATE TABLE rank
 (
   RankId SERIAL,
   RankName VARCHAR NOT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE Rank
   FOREIGN KEY (GameId) REFERENCES Game(GameId)
 );
 
-CREATE TABLE Mode
+CREATE TABLE mode
 (
   ModeId SERIAL,
   ModeName VARCHAR NOT NULL,
@@ -52,7 +52,7 @@ CREATE TABLE Mode
   FOREIGN KEY (GameId) REFERENCES Game(GameId)
 );
 
-CREATE TABLE Team
+CREATE TABLE team
 (
   TeamId SERIAL,
   TeamName VARCHAR NOT NULL,
@@ -65,7 +65,7 @@ CREATE TABLE Team
   FOREIGN KEY (GameId) REFERENCES Game(GameId)
 );
 
-CREATE TABLE Game_Profile
+CREATE TABLE game_profile
 (
   ProfileId SERIAL,
   UserId SERIAL,
@@ -74,14 +74,14 @@ CREATE TABLE Game_Profile
   RankId SERIAL,
   ModeId SERIAL,
   PRIMARY KEY (ProfileId),
-  FOREIGN KEY (UserId) REFERENCES User(UserId),
+  FOREIGN KEY (UserId) REFERENCES user_profile(UserId),
   FOREIGN KEY (RoleId) REFERENCES Role(RoleId),
   FOREIGN KEY (RegionId) REFERENCES Region(RegionId),
   FOREIGN KEY (RankId) REFERENCES Rank(RankId),
   FOREIGN KEY (ModeId) REFERENCES Mode(ModeId)
 );
 
-CREATE TABLE Is_Member_of
+CREATE TABLE is_member_of
 (
   IsTeamLeader INT NOT NULL,
   ProfileId SERIAL,
