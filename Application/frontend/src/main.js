@@ -10,6 +10,8 @@ import Logout from "./pages/Logout";
 import Register from "./pages/Register";
 import Game from "./pages/Game";
 import GameProfiles from "./pages/GameProfiles"
+import Home2 from "./pages/Home2"
+import AsyncComputed from "vue-async-computed"
 
 Vue.config.productionTip = false;
 
@@ -21,6 +23,7 @@ Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 Vue.use(VueRouter);
 Vue.use(Vuetify);
+Vue.use(AsyncComputed);
 
 const checkAuth = function(to, _, next) {
   const token = getJwtToken();
@@ -41,6 +44,7 @@ const router = new VueRouter({
     { path: "/login", component: Login },
     { path: "/logout", component: Logout },
     { path: "/register", component: Register },
+    { path: "/home2", component: Home2 },
     {
       path: "/game",
       component: Game,

@@ -1,7 +1,6 @@
 <template>
     <div id='game-profiles'>
-        <profile-list>
-            {{ this.token }}
+        <profile-list :profiles="profiles">
         </profile-list>
     </div>
 </template>
@@ -17,17 +16,17 @@ export default {
     },
     data: () => ({
         token: "",
-        profiles: []
+        profiles: [],
+        fetched: false
     }),
     mounted() {
-        this.loadUserProfiles()
+        this.loadUserProfiles();
     },
     methods: {
-        loadUserProfiles() {
+        async loadUserProfiles() {
             this.token = getJwtToken();
-            console.log(this.token);
-            this.profiles = Api.getProfiles(this.token);
-            console.log(this.profiles);
+            this.profiles = await Api.getProfiles(this.token);
+            this.fetched = true;
         }
     }
 }

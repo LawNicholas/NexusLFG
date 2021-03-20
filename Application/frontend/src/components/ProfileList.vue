@@ -1,48 +1,40 @@
 <template>
     <div id="profile-list">
         <v-list-item v-for="profile in profiles" :key="profile.profileid">
-            <template>
-                <v-card
-                    class="mx-auto"
-                    max-width="900"
-                    elevation="5"
-                >
-                    <v-card-text>
-                        <div>{{ profile.gamename }}</div>
-                        <p class="display-1 text--primary">
-                            {{ profile.modename }}
-                        </p>
-                    </v-card-text>
-                </v-card>
-            </template>
-        </v-list-item>
-        <template>
             <v-card
                 class="mx-auto"
                 max-width="900"
-                elevation="5"
+                outlined
             >
-                <v-card-text>
-                    <div>Custom Card</div>
-                    <p class="display-1 text--primary">
-                        Primary Text
-                    </p>
-                    <p>Secondary Text</p>
-                    <div class="text--primary">
-                        Bold Text<br>
-                        More Text
-                    </div>
-                </v-card-text>
+                <v-list-item three-line>
+                    <v-list-item-content>
+                        <div class="overline mb-4">
+                            OVERLINE
+                        </div>
+                        <v-list-item-title class="headline mb-1">
+                            Headline 5
+                        </v-list-item-title>
+                        <v-list-item-subtitle>Filler Text</v-list-item-subtitle>
+                    </v-list-item-content>
+
+                    <v-list-item-avatar
+                        tile
+                        size="80"
+                        color="grey"
+                    ></v-list-item-avatar>
+                </v-list-item>
+
                 <v-card-actions>
                     <v-btn
+                        outlined
+                        rounded
                         text
-                        color="deep-purple accent-4"
                     >
-                        Purple Text
+                        Button
                     </v-btn>
                 </v-card-actions>
             </v-card>
-        </template>
+        </v-list-item>
     </div>
 </template>
 
