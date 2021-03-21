@@ -1,48 +1,30 @@
 <template>
     <div id="profile-list">
         <v-list-item v-for="profile in profiles" :key="profile.profileid">
-            <template>
-                <v-card
-                    class="mx-auto"
-                    max-width="900"
-                    elevation="5"
-                >
-                    <v-card-text>
-                        <div>{{ profile.gamename }}</div>
-                        <p class="display-1 text--primary">
-                            {{ profile.modename }}
-                        </p>
-                    </v-card-text>
-                </v-card>
-            </template>
-        </v-list-item>
-        <template>
             <v-card
                 class="mx-auto"
                 max-width="900"
-                elevation="5"
-            >
-                <v-card-text>
-                    <div>Custom Card</div>
-                    <p class="display-1 text--primary">
-                        Primary Text
-                    </p>
-                    <p>Secondary Text</p>
-                    <div class="text--primary">
-                        Bold Text<br>
-                        More Text
-                    </div>
-                </v-card-text>
-                <v-card-actions>
-                    <v-btn
-                        text
-                        color="deep-purple accent-4"
-                    >
-                        Purple Text
+                min-width="900"
+                outlined
+            >                
+                <v-list-item three-line>
+                    <v-list-item-content>
+                        <div class="overline mb-4">
+                            {{ profile.gamename }}
+                        </div>
+                        <v-list-item-title class="headline mb-1">
+                            {{ profile.modename }}
+                        </v-list-item-title>
+                        <v-list-item-subtitle>
+                            {{ profile.rolename }} &#183; {{ profile.rankname }} &#183; {{profile.regionname }}
+                        </v-list-item-subtitle>
+                    </v-list-item-content>
+                    <v-btn @click="deleteProfile(profile.profileid)">
+                        Delete
                     </v-btn>
-                </v-card-actions>
+                </v-list-item>
             </v-card>
-        </template>
+        </v-list-item>
     </div>
 </template>
 
@@ -54,7 +36,8 @@ export default {
         profiles: {
             type: Array,
             default: () => []
-        }
-    }
+        },
+        deleteProfile: Function
+    },
 }
 </script>

@@ -10,30 +10,32 @@ class Api {
     return axios.get(API_URL + "/game", {});
   }
 
-  getProfiles(token) {
+  async getProfiles(token) {
     let userid = getUserIdFromToken(token)
-    /*
-    return fetch(API_URL + `/game_profile_full?userid=eq.` + userid,
+
+    var profiles = []
+    const response = await fetch(API_URL + `/game_profile_full?userid=eq.` + userid,
     {
       method: `GET`,
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`
       }
-    }).then(response => {
-      if (response.ok) {
-        return response.json()
-      }
     })
-    */
 
-    return axios.get(API_URL + `/game_profile_full?userid=eq.` + userid,
+    profiles = await response.json();
+
+    return await profiles;
+  }
+
+  deleteProfile(profileid, token) {
+    return axios.delete(API_URL + "/game_profile?profileid=eq." + profileid,
     {
       headers: {
-        'Content-Type':'application/json',
-        'Authorization':`Bearer ${token}`
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
       }
-    })
+    });
   }
 
   login(email, password) {
