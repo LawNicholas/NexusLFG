@@ -12,6 +12,7 @@ import Register from "./pages/Register";
 import Game from "./pages/Game";
 import GameProfiles from "./pages/GameProfiles";
 import Home2 from "./pages/Home2";
+import CreateGameProfile from "./pages/CreateGameProfile";
 
 Vue.config.productionTip = false;
 
@@ -55,6 +56,10 @@ const router = new VueRouter({
       path: "/GameProfiles",
       component: GameProfiles,
       beforeEnter: checkAuth
+    },
+    {
+      path: "/CreateGameProfile",
+      component: CreateGameProfile,
     }
   ],
 });

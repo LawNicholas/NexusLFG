@@ -10,6 +10,18 @@ class Api {
     return axios.get(API_URL + "/game", {});
   }
 
+  getModes() {
+    return axios.get(API_URL + "/mode", {});
+  }
+
+  getRegions() {
+    return axios.get(API_URL + "/region", {});
+  }
+
+  getRanks() {
+    return axios.get(API_URL + "/rank", {});
+  }
+
   async getProfiles(token) {
     let userid = getUserIdFromToken(token)
 
