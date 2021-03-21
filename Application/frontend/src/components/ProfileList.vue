@@ -4,35 +4,25 @@
             <v-card
                 class="mx-auto"
                 max-width="900"
+                min-width="900"
                 outlined
-            >
+            >                
                 <v-list-item three-line>
                     <v-list-item-content>
                         <div class="overline mb-4">
-                            OVERLINE
+                            {{ profile.gamename }}
                         </div>
                         <v-list-item-title class="headline mb-1">
-                            Headline 5
+                            {{ profile.modename }}
                         </v-list-item-title>
-                        <v-list-item-subtitle>Filler Text</v-list-item-subtitle>
+                        <v-list-item-subtitle>
+                            {{ profile.rolename }} &#183; {{ profile.rankname }} &#183; {{profile.regionname }}
+                        </v-list-item-subtitle>
                     </v-list-item-content>
-
-                    <v-list-item-avatar
-                        tile
-                        size="80"
-                        color="grey"
-                    ></v-list-item-avatar>
-                </v-list-item>
-
-                <v-card-actions>
-                    <v-btn
-                        outlined
-                        rounded
-                        text
-                    >
-                        Button
+                    <v-btn @click="deleteProfile(profile.profileid)">
+                        Delete
                     </v-btn>
-                </v-card-actions>
+                </v-list-item>
             </v-card>
         </v-list-item>
     </div>
@@ -46,7 +36,8 @@ export default {
         profiles: {
             type: Array,
             default: () => []
-        }
-    }
+        },
+        deleteProfile: Function
+    },
 }
 </script>
