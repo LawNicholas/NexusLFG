@@ -11,8 +11,8 @@ import Logout from "./pages/Logout";
 import Register from "./pages/Register";
 import Game from "./pages/Game";
 import GameProfiles from "./pages/GameProfiles";
-import Home2 from "./pages/Home2";
 import CreateGameProfile from "./pages/CreateGameProfile";
+import UpdateProfile from "./pages/UpdateProfile";
 
 Vue.config.productionTip = false;
 
@@ -46,7 +46,6 @@ const router = new VueRouter({
     { path: "/login", component: Login },
     { path: "/logout", component: Logout },
     { path: "/register", component: Register },
-    { path: "/home2", component: Home2 },
     {
       path: "/game",
       component: Game,
@@ -60,6 +59,12 @@ const router = new VueRouter({
     {
       path: "/CreateGameProfile",
       component: CreateGameProfile,
+      beforeEnter: checkAuth
+    },
+    {
+      path: "/UpdateProfile",
+      component: UpdateProfile,
+      beforeEnter: checkAuth
     }
   ],
 });

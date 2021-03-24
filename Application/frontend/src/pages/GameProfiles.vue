@@ -1,11 +1,15 @@
 <template>
     <div id='game-profiles' v-if="fetched">
-        <profile-list :profiles="profiles" :deleteProfile="deleteProfile">
-        </profile-list>
-        <v-btn href="#/CreateGameProfile"
-            :style="{left: '50%', transform:'translateX(-50%)'}"
+        <div
+            :style="{left: '50%', transform:'translateX(92%)', margin:'20px'}"
         >
-            Add
+            <b-button variant="primary" href="#/logout">Logout</b-button>
+        </div>
+        <profile-list :profiles="profiles" :updateProfile="updateProfile" :deleteProfile="deleteProfile"></profile-list>
+        <v-btn href="#/CreateGameProfile"
+            :style="{left: '50%', transform:'translateX(-50%)', margin:'20px'}"
+        >
+            Create Profile
         </v-btn>
     </div>
 </template>
@@ -38,8 +42,9 @@ export default {
             await Api.deleteProfile(profileid, this.token);
             this.loadUserProfiles();
         },
-        dummyFunc() {
-            console.log('hit');
+        async updateProfile(profileid) {
+            localStorage.setItem("profileid", profileid);
+            this.$router.push("/updateprofile");
         },
     }
 }

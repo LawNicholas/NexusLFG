@@ -19,6 +19,9 @@
                             {{ profile.rolename }} &#183; {{ profile.rankname }} &#183; {{profile.regionname }}
                         </v-list-item-subtitle>
                     </v-list-item-content>
+                    <v-btn @click="updateProfile(profile.profileid)">
+                        Edit
+                    </v-btn>
                     <v-btn @click="deleteProfile(profile.profileid)">
                         Delete
                     </v-btn>
@@ -37,7 +40,8 @@ export default {
             type: Array,
             default: () => []
         },
-        deleteProfile: Function
+        deleteProfile: Function,
+        updateProfile: Function
     },
 }
 </script>
