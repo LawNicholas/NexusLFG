@@ -85,6 +85,24 @@ class Api {
     return await profiles;
   }
 
+  async getProfilesIds(token) {
+    let userid = getUserIdFromToken(token);
+
+    var profiles = [];
+    const response = await fetch(API_URL + `/game_profile?userid=eq.` + userid,
+    {
+      method: `GET`,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      }
+    })
+
+    profiles = await response.json();
+
+    return await profiles;
+  }
+
   async createProfile(token, roleid, regionid, rankid, modeid) {
     let userid = getUserIdFromToken(token);
 
@@ -120,8 +138,143 @@ class Api {
     });
   }
 
-  deleteProfile(profileid, token) {
+  async deleteProfile(profileid, token) {
+    await axios.delete(API_URL + "/is_member_of?profileid=eq." + profileid,
+    {
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
+      }
+    });
+
     return axios.delete(API_URL + "/game_profile?profileid=eq." + profileid,
+    {
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
+      }
+    });
+  }
+
+  async getTeams(token, gameid) {
+    var teams = [];
+    const response = await fetch(API_URL + `/team?gameid=eq.` + gameid,
+    {
+      method: `GET`,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      }
+    })
+
+    teams = await response.json();
+
+    var teams_adjusted = [];
+
+    var i;
+    for(i = 0; i < teams.length; i++) {
+      if(teams[i].ispublic) {
+        teams_adjusted.push(teams[i]);
+      }
+    }
+
+    return await teams_adjusted;
+  }
+
+  async joinTeam(token, profileid, teamid) {
+    var memberCheck = [];
+
+    const response = await fetch(API_URL + "/is_member_of?teamid=eq." + teamid,
+    {
+      method: `GET`,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      }
+    })
+
+    memberCheck = await response.json();
+
+    var valid = true;
+
+    var i;
+    for (i = 0; i < memberCheck.length; i++) {
+      if(memberCheck[i].profileid == profileid) {
+        valid = false;
+      }
+    }
+
+    var body = {
+      'isteamleader':0,
+      'profileid':`${profileid}`,
+      'teamid':`${teamid}`
+    }
+    
+    if(valid) {
+      axios.post(API_URL + "/is_member_of", body,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        }
+      });
+    }
+    return;
+  }
+
+  async getMemberList(teamid) {
+    var memberList = [];
+
+    const response = await fetch(API_URL + `/is_member_of?teamid=eq.` + teamid,
+    {
+      method: `GET`,
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+
+    memberList = await response.json();
+
+    return await memberList;
+  }
+
+  async getUserTeamIds(profileid) {
+    var teamList = [];
+
+    const response = await fetch(API_URL + "/is_member_of?profileid=eq." + profileid,
+    {
+      method: `GET`,
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+
+    teamList = await response.json();
+    var teamids = [];
+
+    var i;
+    for(i = 0; i < teamList.length; i++) {
+      teamids.push(teamList[i].teamid);
+    }
+
+    return teamids;
+  }
+
+  async getTeamfromId(teamid) {
+    var team;
+    const response = await fetch(API_URL + "/team?teamid=eq." + teamid,
+    {
+      method: `GET`,
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    team = await response.json();
+    return team[0];
+  }
+
+  async leaveTeam(token, profileid, teamid) {
+    return await axios.delete(API_URL + "/is_member_of?profileid=eq." + profileid + "&teamid=eq." + teamid,
     {
       headers: {
         "Content-Type": "application/json",

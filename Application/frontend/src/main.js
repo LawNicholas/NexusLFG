@@ -13,6 +13,9 @@ import Game from "./pages/Game";
 import GameProfiles from "./pages/GameProfiles";
 import CreateGameProfile from "./pages/CreateGameProfile";
 import UpdateProfile from "./pages/UpdateProfile";
+import FindTeam from "./pages/FindTeam";
+import Teams from "./pages/Teams";
+import MainMenu from "./pages/MainMenu";
 
 Vue.config.productionTip = false;
 
@@ -64,6 +67,21 @@ const router = new VueRouter({
     {
       path: "/UpdateProfile",
       component: UpdateProfile,
+      beforeEnter: checkAuth
+    },
+    {
+      path: "/FindTeam",
+      component: FindTeam,
+      beforeEnter: checkAuth
+    },
+    {
+      path: "/Teams",
+      component: Teams,
+      beforeEnter: checkAuth
+    },
+    {
+      path: "/MainMenu",
+      component: MainMenu,
       beforeEnter: checkAuth
     }
   ],

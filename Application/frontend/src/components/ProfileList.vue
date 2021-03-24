@@ -19,6 +19,9 @@
                             {{ profile.rolename }} &#183; {{ profile.rankname }} &#183; {{profile.regionname }}
                         </v-list-item-subtitle>
                     </v-list-item-content>
+                    <v-btn @click="joinTeam(profile.profileid)">
+                        Join Team
+                    </v-btn>
                     <v-btn @click="updateProfile(profile.profileid)">
                         Edit
                     </v-btn>
@@ -40,6 +43,11 @@ export default {
             type: Array,
             default: () => []
         },
+        profiles_ids: {
+            type: Array,
+            default: () => []
+        },
+        joinTeam: Function,
         deleteProfile: Function,
         updateProfile: Function
     },
