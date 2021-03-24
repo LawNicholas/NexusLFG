@@ -43,9 +43,9 @@ export default {
             this.fetched = true;
         },
         async joinTeam(teamid) {
-            await Api.joinTeam(this.token, this.profileid, teamid);
+            Api.joinTeam(this.token, this.profileid, teamid);
             localStorage.removeItem("gameid");
-            localStorage.removeItem("profileId");
+            localStorage.removeItem("profileid");
             this.$router.push("/gameprofiles");
         }
     }

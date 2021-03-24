@@ -35,14 +35,23 @@ export default {
     },
     methods: {
         async loadTeams() {
-            this.gameid = localStorage.getItem("gameid");
-            this.profileid = localStorage.getItem("profileid");
-
             this.token = getJwtToken();
 
-            var teamids = await Api.getUserTeamIds(this.profileid);
+            var profileids = [];
+            profileids = await Api.getProfilesIds(this.token);
 
-            console.log(teamids);
+            var teamids = [];
+
+            console.log(profileids[0] + " " + profileids.length);
+            
+            var i;
+            for(i = 0; i < profileids.length; i++) {
+                var teamids_sub = await Api.getUserTeamIds(profileids[i].profileid);
+                var j;
+                for(j = 0; j < teamids_sub.length; j++) {
+                    teamids.push(teamids_sub[j]);
+                }
+            }
 
             this.teams = [];
             
