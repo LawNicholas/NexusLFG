@@ -16,9 +16,11 @@
                             {{ team.description }}
                         </v-list-item-subtitle>
                     </v-list-item-content>
+                    <!--
                     <v-btn @click="leaveTeam(team.teamid)">
                         Leave
                     </v-btn>
+                    -->
                 </v-list-item>
             </v-card>
         </v-list-item>
